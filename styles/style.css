@@ -1,76 +1,49 @@
-body {
+html {
+  box-sizing: border-box;
+  padding: 0;
   margin: 0;
+}
+
+body {
   padding: 0;
-  font-family: monospace;
+  margin: 0;
+  background-color: #ff6300;
+  color: white;
 }
 
-header {
-  height: 260px;
-  background-image: url("/images/logo.jpg");
-  background: cover;
-  width: 100vw;
-  margin-top: -130px;
-  margin-left: -90px;
-  padding-left: 100px;
-  transform: rotate(-4deg);
-  position: absolute;
-  z-index: 1;
-}
-
-nav {
-  height: 100%;
+.row {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-flow: column wrap;
 }
 
-.nav-links, .nav-media {
-  list-style: none;
-  padding: 0;
-  margin: 230 0;
-  font-size: 24px;
+.col {
+  flex: 1;
+  margin: 0.5em 0.5em;
+  padding: 1em;
+  background: #3d3d3d;
 }
 
-.nav-links {
+@media screen and (min-width: 460px) {
+  .row {
+    flex-flow: row wrap;
+  }
+  main .col:nth-child(1) {
+    flex: 2;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  main .col:nth-child(1) {
+    flex: 2.5;
+  }
+}
+
+.container {
   display: flex;
+  flex-flow: column wrap;
+  min-height: 100vh;
 }
 
-.nav-links li {
-  margin-right: 15px;
-}
-
-.nav-links li:last-child {
-  margin-right: 0;
-}
-
-.nav-media {
-  margin-right: 50px;
-  display: flex;
-}
-
-.nav-media a {
-  margin-right: 10px;
-}
-
-.nav-media a:last-child {
-  margin-right: 0;
-}
-
-.nav-logo {
-  margin: 178 0;
-  padding: 0;
-  font-size: 80px;
-  color: black;
-  display: flex;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-.about-container {
-  background-color: pink;
-  height: 100vh;
-  display: flex;
+main {
+  flex: 1;
 }
