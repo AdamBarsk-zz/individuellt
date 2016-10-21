@@ -7,13 +7,18 @@ html {
 body {
   padding: 0;
   margin: 0;
-  background-color: honeydew;
+  background-color: #021C1E;
   color: white;
-  font-family: 'fira Mono', monospace;
+  font-family: 'Fira Sans', sans-serif;
 }
 
 .row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex-flow: row wrap;
   flex-flow: column wrap;
 }
 
@@ -21,14 +26,21 @@ body {
   flex: 1;
   margin: 0.5em 0.5em;
   padding: 1em;
-  background: rgba(61, 61, 61, 0.4);
+  background: #021C1E;
 }
 
-.col-full {
+.col-full-nav {
   flex: 1;
-  margin: 0.5em 0;
+  margin: 0 0 0.5em 0;
   padding: 1em;
-  background: rgba(61, 61, 61, 0.4);
+  background: #004445;
+}
+
+.col-full-footer {
+  flex: 1;
+  margin: 0 0 0 0;
+  padding: 0;
+  background: #FB6542;
 }
 
 @media screen and (min-width: 650px) {
@@ -68,20 +80,34 @@ main {
   flex: 1;
 }
 
-nav, footer {
+main .row {
+  align-items: center;
+  align-content: flex-end;
+}
+
+.nav, .footer {
   text-align: center;
 }
 
-nav a, footer a {
+.nav a, .footer a {
   text-decoration: none;
   color: white;
 }
 
-nav ul, footer ul {
+.nav ul, .footer ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
-nav li, footer li {
+.nav li, .footer li {
   display: inline-block;
+}
+
+.underline {
+  font-style: italic;
+}
+
+.main-content {
+  text-indent: 15;
 }
