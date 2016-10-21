@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
+}
+
+header {
+  height: 260px;
+  background-image: url("/images/logo.jpg");
+  background: cover;
+  width: 100vw;
+  margin-top: -130px;
+  margin-left: -90px;
+  padding-left: 100px;
+  transform: rotate(-4deg);
+  position: absolute;
+  z-index: 1;
+}
+
+nav {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.nav-links, .nav-media {
+  list-style: none;
+  padding: 0;
+  margin: 230 0;
+  font-size: 24px;
+}
+
+.nav-links {
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 15px;
+}
+
+.nav-links li:last-child {
+  margin-right: 0;
+}
+
+.nav-media {
+  margin-right: 50px;
+  display: flex;
+}
+
+.nav-media a {
+  margin-right: 10px;
+}
+
+.nav-media a:last-child {
+  margin-right: 0;
+}
+
+.nav-logo {
+  margin: 178 0;
+  padding: 0;
+  font-size: 80px;
+  color: black;
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.about-container {
+  background-color: pink;
+  height: 100vh;
+  display: flex;
+}
