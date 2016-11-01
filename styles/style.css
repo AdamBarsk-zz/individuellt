@@ -9,9 +9,10 @@ html {
 body {
   padding: 0;
   margin: 0;
-  background-color: #444444;
-  color: white;
+  background-color: white;
+  color: #262626;
   font-family: 'Fira Sans', sans-serif;
+  font-size: 1em;
 }
 
 .row {
@@ -27,29 +28,31 @@ body {
 .col-left, .col-right {
   flex: 1;
   margin: 0.5em 0.5em;
-  padding: 1em;
+  padding: 5em 1em;
 }
 
 .col-full-nav {
   flex: 1;
   margin: 0 0 0.5em 0;
-  padding: 1em;
-  background: #ff3d00;
+  padding: 1em 1em 1.5em 1em;
+}
+
+.counters {
+  flex: 1;
 }
 
 .col-full-footer {
   flex: 1;
   margin: 0 0 0 0;
   padding: 0;
-  background: #ff3d00;
 }
 
 @media screen and (min-width: 650px) {
   .row {
     flex-flow: row wrap;
   }
-  main .col-left {
-    flex: 2;
+  main .col-right {
+    flex: 1.5;
   }
   main .col-left {
     margin-left: 5em;
@@ -57,17 +60,29 @@ body {
   main .col-right {
     margin-right: 5em;
   }
+  .countdownOne {
+    float: right;
+  }
+  .headline, .subline, .main-content {
+    text-align: left !important;
+  }
 }
 
 @media screen and (min-width: 900px) {
-  main .col-left {
-    flex: 2.5;
+  main .col-right {
+    flex: 2;
   }
   main .col-left {
     margin-left: 10em;
   }
   main .col-right {
     margin-right: 10em;
+  }
+  .countdownOne {
+    float: right;
+  }
+  .headline, .subline, .main-content {
+    text-align: left !important;
   }
 }
 
@@ -87,7 +102,7 @@ main {
 
 .nav a, .footer a {
   text-decoration: none;
-  color: white;
+  color: #262626;
 }
 
 .nav ul, .footer ul {
@@ -105,28 +120,51 @@ main {
   margin-right: 0;
 }
 
+.footer {
+  background: #CCCDD1;
+}
+
+.footer li {
+  margin-bottom: 1em;
+}
+
+.headline, .subline, .main-content {
+  text-align: center;
+}
+
 .subline {
   font-style: italic;
 }
 
 .main-content {
   text-indent: 15;
+  max-width: 700px;
 }
 
 main .row {
-  background-color: red;
+  background-color: #CCCDD1;
   align-items: center;
   align-content: flex-end;
+  -webkit-clip-path: polygon(100% 5%, 100% 95%, 0 100%, 0 0);
+  clip-path: polygon(100% 5%, 100% 95%, 0 100%, 0 0);
+}
+
+.counters .row {
+  background-color: white;
+  align-items: center;
+  align-content: flex-end;
+}
+
+.profile {
+  width: 200px;
+  border-radius: 50%;
+  float: right;
 }
 
 .countdownOne, .countdownTwo {
   text-align: center;
 }
 
-.countdownTwo {
-  margin-top: 2em;
-}
-
 .countText {
-  font-size: 1.7em;
+  font-size: 1.5em;
 }
