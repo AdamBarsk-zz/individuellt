@@ -2,12 +2,14 @@ html {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  min-height: 100vh;
+  position: relative;
 }
 
 body {
   padding: 0;
   margin: 0;
-  background-color: #021C1E;
+  background-color: #444444;
   color: white;
   font-family: 'Fira Sans', sans-serif;
 }
@@ -26,21 +28,20 @@ body {
   flex: 1;
   margin: 0.5em 0.5em;
   padding: 1em;
-  background: #021C1E;
 }
 
 .col-full-nav {
   flex: 1;
   margin: 0 0 0.5em 0;
   padding: 1em;
-  background: #004445;
+  background: #ff3d00;
 }
 
 .col-full-footer {
   flex: 1;
   margin: 0 0 0 0;
   padding: 0;
-  background: #FB6542;
+  background: #ff3d00;
 }
 
 @media screen and (min-width: 650px) {
@@ -80,11 +81,6 @@ main {
   flex: 1;
 }
 
-main .row {
-  align-items: center;
-  align-content: flex-end;
-}
-
 .nav, .footer {
   text-align: center;
 }
@@ -102,12 +98,35 @@ main .row {
 
 .nav li, .footer li {
   display: inline-block;
+  margin-right: 2em;
 }
 
-.underline {
+.nav li:last-child, .footer li:last-child {
+  margin-right: 0;
+}
+
+.subline {
   font-style: italic;
 }
 
 .main-content {
   text-indent: 15;
+}
+
+main .row {
+  background-color: red;
+  align-items: center;
+  align-content: flex-end;
+}
+
+.countdownOne, .countdownTwo {
+  text-align: center;
+}
+
+.countdownTwo {
+  margin-top: 2em;
+}
+
+.countText {
+  font-size: 1.7em;
 }
