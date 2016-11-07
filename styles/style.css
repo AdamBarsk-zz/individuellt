@@ -25,10 +25,14 @@ body {
   flex-flow: column wrap;
 }
 
+.row-white, .row-gray {
+  padding: 3em 0 3em 0;
+}
+
 .col-left, .col-right {
   flex: 1;
   margin: 0.5em 0.5em;
-  padding: 5em 1em;
+  padding: 1em;
 }
 
 .col-full-nav {
@@ -167,4 +171,13 @@ main .row {
 
 .countText {
   font-size: 1.5em;
+}
+
+.horiz {
+  margin-left: 48%;
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
 }

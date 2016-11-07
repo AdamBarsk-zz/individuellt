@@ -1,4 +1,6 @@
-// COUNTDOWN LIA
+/***************************************************************/
+/*                          COUNTDOWN                          */
+/***************************************************************/
 (function countdownOne(){
   var today = new Date();
   var end = new Date(2018, 0, 15);
@@ -70,3 +72,14 @@
   setTimeout(countdownTwo, 1000);
 
 })();
+
+////////////////////////////////////////////////////////////////////////////////
+
+var hide = document.getElementsByClassName('hide');
+for (var i = 0; i < hide.length; i++) {
+  hide[i].addEventListener('click', swap);
+}
+
+function swap(){
+  this.style.display="none";
+}
