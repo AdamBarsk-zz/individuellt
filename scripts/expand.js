@@ -5,6 +5,14 @@ for (var i = 0; i < expand.length; i++) {
 }
 
 function swap(){
-  this.previousSibling.classList.remove("hide");
-  this.className = "hide";
+  if (this.classList.contains("expand")) {
+
+    this.previousSibling.classList.remove("hide");
+    this.innerHTML = "expand_less";
+    this.className = "material-icons backdraft";
+  } else {
+    this.previousSibling.classList.add("hide");
+    this.innerHTML = "expand_more";
+    this.className = "material-icons expand";
+  }
 }
