@@ -177,3 +177,11 @@ main .row {
   margin-left: 48%;
   cursor: pointer;
 }
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
