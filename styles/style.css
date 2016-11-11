@@ -120,6 +120,10 @@ main {
   margin-right: 2em;
 }
 
+.nav li .nav-icons, .footer li .nav-icons {
+  vertical-align: bottom;
+}
+
 .nav li:last-child, .footer li:last-child {
   margin-right: 0;
 }

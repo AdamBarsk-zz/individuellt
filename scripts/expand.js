@@ -1,4 +1,4 @@
-var expand = document.getElementsByTagName('i');
+var expand = document.getElementsByClassName('expand');
 
 for (var i = 0; i < expand.length; i++) {
   expand[i].addEventListener('click', swap);
