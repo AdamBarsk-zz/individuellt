@@ -119,6 +119,13 @@ main {
 .nav a, .footer a {
   text-decoration: none;
   color: #262626;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.nav a:hover, .footer a:hover {
+  color: #ff5400;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
 }
 
 .nav ul, .footer ul {
@@ -149,12 +156,12 @@ main {
   margin-right: 0;
 }
 
-.nav li {
-  margin-right: 4em;
+.nav h1, .footer h1 {
+  display: inline-block;
 }
 
-.nav-icons {
-  color: #262626;
+.nav li {
+  margin-right: 4em;
 }
 
 .footer {
@@ -175,7 +182,7 @@ main {
 
 .main-content {
   text-indent: 15;
-  max-width: 670px;
+  max-width: 600px;
 }
 
 main .row {
@@ -207,8 +214,16 @@ main .row {
 }
 
 .expand, .backdraft {
-  margin-left: 327px;
   cursor: pointer;
+  text-align: center;
+  max-width: 600px;
+  display: block !important;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+}
+
+.expand:hover, .backdraft:hover {
+  color: #ff5400;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
 }
 
 .hide {
