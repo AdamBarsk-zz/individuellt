@@ -8,11 +8,11 @@ function swap(){
   if (this.classList.contains("expand")) {
 
     this.previousSibling.classList.remove("hide");
-    this.innerHTML = "expand_less";
-    this.className = "material-icons backdraft";
+    this.previousSibling.classList.add("main-content");
+    this.className = "fa fa-chevron-up backdraft";
   } else {
     this.previousSibling.classList.add("hide");
-    this.innerHTML = "expand_more";
-    this.className = "material-icons expand";
+    this.previousSibling.classList.remove("main-content");
+    this.className = "fa fa-chevron-down expand";
   }
 }
