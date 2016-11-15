@@ -25,7 +25,7 @@ body {
   flex-flow: column wrap;
 }
 
-.row-white, .row-gray {
+.row-white, .row-grey {
   padding: 3em 0 3em 0;
 }
 
@@ -67,7 +67,7 @@ body {
   .countdownOne {
     float: right;
   }
-  .headline, .subline, .main-content {
+  .headline, .subline, .main-content, .information {
     text-align: left !important;
   }
   .nav-wide, .footer-wide {
@@ -91,7 +91,7 @@ body {
   .countdownOne {
     float: right;
   }
-  .headline, .subline, .main-content {
+  .headline, .subline, .main-content, .information {
     text-align: left !important;
   }
   .nav-wide, .footer-wide {
@@ -239,13 +239,6 @@ main {
   float: right;
 }
 
-ul.share-buttons .sr-only {
-  position: absolute;
-  clip: rect(1px 1px 1px 1px);
-  clip: rect(1px, 1px, 1px, 1px);
-  padding: 0;
-  border: 0;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
+.fb-share-button {
+  vertical-align: top !important;
 }

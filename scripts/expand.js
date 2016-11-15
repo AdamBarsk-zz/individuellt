@@ -5,13 +5,11 @@ for (var i = 0; i < expand.length; i++) {
 }
 
 function swap(){
-  if (this.classList.contains("expand")) {
-    this.previousSibling.classList.remove("hide");
-    this.previousSibling.classList.add("information");
-    this.className = "fa fa-chevron-up backdraft";
+  if (this.classList.contains('expand')) {
+    this.previousSibling.classList.remove('hide');
+    this.className = 'fa fa-chevron-up backdraft';
   } else {
-    this.previousSibling.classList.add("hide");
-    this.previousSibling.classList.remove("information");
-    this.className = "fa fa-chevron-down expand";
+    this.previousSibling.classList.add('hide');
+    this.className = 'fa fa-chevron-down expand';
   }
 }
