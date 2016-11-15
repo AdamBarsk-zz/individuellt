@@ -33,7 +33,17 @@
    document.getElementById('minutes').innerText = m;
    document.getElementById('seconds').innerText = s;
 
-   setTimeout(countdownOne, 1000);
+   var start = setTimeout(countdownOne, 1000);
+
+   if (remaining <= 0) {
+     clearTimeout(start);
+     document.getElementById('days').innerText = "D";
+     document.getElementById('hours').innerText = "O";
+     document.getElementById('minutes').innerText = "N";
+     document.getElementById('seconds').innerText = "E";
+   }
+
+
 
  })();
 
@@ -70,6 +80,14 @@
    document.getElementById('secondsTwo').innerText = s;
 
    setTimeout(countdownTwo, 1000);
+
+   if (remaining <= 0) {
+     clearTimeout(start);
+     document.getElementById('days').innerText = "D";
+     document.getElementById('hours').innerText = "O";
+     document.getElementById('minutes').innerText = "N";
+     document.getElementById('seconds').innerText = "E";
+   }
 
  })();
 

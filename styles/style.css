@@ -172,7 +172,7 @@ main {
   margin-bottom: 1em;
 }
 
-.headline, .subline, .main-content {
+.headline, .subline, .main-content, .information {
   text-align: center;
 }
 
@@ -185,7 +185,11 @@ main {
   max-width: 600px;
 }
 
-main .row {
+.information {
+  max-width: 600px;
+}
+
+.row-grey {
   background-color: #CCCDD1;
   align-items: center;
   align-content: flex-end;
@@ -193,7 +197,7 @@ main .row {
   clip-path: polygon(100% 5%, 100% 95%, 0 100%, 0 0);
 }
 
-.counters .row {
+.row-white {
   background-color: white;
   align-items: center;
   align-content: flex-end;
@@ -218,7 +222,7 @@ main .row {
   text-align: center;
   max-width: 600px;
   display: block !important;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
 .expand:hover, .backdraft:hover {
@@ -228,4 +232,20 @@ main .row {
 
 .hide {
   display: none;
+}
+
+.cred-icons {
+  color: #262626;
+  float: right;
+}
+
+ul.share-buttons .sr-only {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
 }
