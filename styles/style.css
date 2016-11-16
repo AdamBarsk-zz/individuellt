@@ -15,6 +15,8 @@ body {
   font-size: 1em;
 }
 
+/*Start of flexbox grid*/
+
 .row {
   display: -webkit-box;
   display: -moz-box;
@@ -112,6 +114,10 @@ main {
   flex: 1;
 }
 
+/*End of flexbox grid*/
+
+/* Nav and Footer */
+
 .nav, .footer {
   text-align: center;
 }
@@ -171,6 +177,10 @@ main {
 .footer li {
   margin-bottom: 1em;
 }
+
+/* End of Nav and Footer */
+
+/* All other content */
 
 .headline, .subline, .main-content, .information {
   text-align: center;
