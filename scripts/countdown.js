@@ -83,10 +83,10 @@
 
    if (remaining <= 0) {
      clearTimeout(start);
-     document.getElementById('days').innerText = "D";
-     document.getElementById('hours').innerText = "O";
-     document.getElementById('minutes').innerText = "N";
-     document.getElementById('seconds').innerText = "E";
+     document.getElementById('daysTwo').innerText = "D";
+     document.getElementById('hoursTwo').innerText = "O";
+     document.getElementById('minutesTwo').innerText = "N";
+     document.getElementById('secondsTwo').innerText = "E";
    }
 
  })();
