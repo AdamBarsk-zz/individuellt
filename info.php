@@ -1,3 +1,6 @@
+<?php
+echo 'info';
+?>
 <!DOCTYPE html5>
 <html>
   <head>

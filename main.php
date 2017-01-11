@@ -1,7 +1,7 @@
-<?php 
+<?php
 echo '      <main>
         <div class="row row-grey">
-          <content class="col-left"> <img src="/images/logo.png" class="profile"/></content>
+          <content class="col-left"> <img src="/images/profile.jpg" class="profile"/></content>
           <article class="col-right">
             <h1 class="headline">Adam Barsk</h1>
             <p class="subline">Front End Developer student @ KYH Stockholm 2016</p>
@@ -50,5 +50,7 @@ echo '      <main>
             </table>
           </content>
         </div>
-      </div>'
+      </div>
+
+      <script src="/scripts/countdown.js" type="text/javascript"></script>'
 ?>
