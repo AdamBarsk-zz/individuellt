@@ -35,12 +35,16 @@
           </nav>
         </div>
       </header>
+
       <?php
-        include("config.php");
+        include(".admin/config.php");
         $query = "SELECT * FROM content";
         $result = mysqli_query($db, $query);
-        print $result;
+        $row = mysqli_fetch_array($result);
+        $name = $row['html'];
+        echo $name;
       ?>
+
       <main>
         <div class="row row-grey">
           <content class="col-left"> <i class="fa fa-quote-right fa-5x cred-icons"></i></content>
