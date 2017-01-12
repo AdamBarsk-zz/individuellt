@@ -26,5 +26,6 @@ include('nav.php');
   } else {
     include('main.php');
   }
+include('login.php');
 include('footer.php');
 ?>
