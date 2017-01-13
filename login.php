@@ -2,7 +2,7 @@
 echo '
 <div id="modal" class="modal">
 
-  <form class="modal-content animate" action="action_page.php">
+  <form class="modal-content" action="" method="post">
 
     <div class="container-inputs">
       <label><b>Username</b></label>
@@ -15,6 +15,39 @@ echo '
     </div>
 
   </form>
-</div>
-';
+</div>';
+
+if (isset ($_POST['username'], $_POST['password'])){
+
+  $username = $_POST['username'];
+  $password = $_POST['password'];
+  $query = "SELECT username, password FROM user WHERE username = '".$username."' AND password = '".$password."'";
+
+  $result = mysqli_query($db, $query);
+
+  if(mysqli_num_rows($result) > 0){
+    $_SESSION['admin'] = TRUE;
+    header('Location: http://adambarsk.se');
+  } else {
+    echo '
+    <div id="modal" class="modal">
+
+      <form class="modal-content" action="" method="post">
+
+        <div class="container-inputs">
+          <h1>Wrong username and/or password.</h1>
+          <label><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="username" class="admin-inputs" required>
+
+          <label><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="password" class="admin-inputs" required>
+
+          <button type="submit" class="login-button"><b>Login</b></button>
+        </div>
+
+      </form>
+    </div>';
+  }
+}
+
  ?>

@@ -1,5 +1,6 @@
 <?php
 include('body.php');
+include('config.php');
 include('head.php');
 include('nav.php');
   if(isset($_GET['page']) && $_GET['page']!=""){

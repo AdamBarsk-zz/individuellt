@@ -2,7 +2,7 @@ var keyword = "ADMIN";
 var keyword2 = "HANGMAN";
 var input = "";
 var pos = 0;
-
+console.log("key");
 $(document).ready(function() {
   $(window).keyup(function(e){
     var key = String.fromCharCode(e.which);
