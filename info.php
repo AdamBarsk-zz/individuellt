@@ -15,8 +15,8 @@
         <div class="row row-grey">
           <content class="col-left"> <i class="fa fa-quote-right fa-5x cred-icons"></i></content>
           <article class="col-right">
-            <h1 class="headline">Famous qoute</h1>
-            <p class="main-content">Let\'s ride a bicycle made out of dreams into friendship. </p>
+            <h1 class="headline admin" id="info-headline">Famous qoute</h1>
+            <p class="main-content admin" id="info-p">Let\'s ride a bicycle made out of dreams into friendship. </p>
           </article>
         </div>
       </main>

@@ -3,9 +3,9 @@ echo '      <main>
         <div class="row row-grey">
           <content class="col-left"> <img src="/images/profile.jpg" class="profile"/></content>
           <article class="col-right">
-            <h1 class="headline">Adam Barsk</h1>
-            <p class="subline">Front End Developer student @ KYH Stockholm 2016</p>
-            <p class="main-content">Everything on this page is under construction, this is release 1 out of 4. So please disregard all the ugliness you will encounter. It will improve over the coming year.</p>
+            <h1 class="headline admin" id="main-headline">Adam Barsk</h1>
+            <p class="subline admin" id="main-subline">Front End Developer student @ KYH Stockholm 2016</p>
+            <p class="main-content admin" id="main-p">Everything on this page is under construction, this is release 1 out of 4. So please disregard all the ugliness you will encounter. It will improve over the coming year.</p>
           </article>
         </div>
       </main>
