@@ -1,1 +1,1 @@
-This is my schoolproject, stage 1 out of 4.
+This is my schoolproject, stage 2 out of 4.

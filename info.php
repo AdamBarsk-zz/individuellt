@@ -22,6 +22,25 @@
       </main>
       <main>
         <div class="row row-white">
+          <content class="col-left"> <i class="fa fa-paper-plane fa-5x cred-icons"></i></content>
+          <article class="col-right trans">
+            <h1 class="headline">Message me</h1>
+            <div class="hide">
+
+            </div><i class="fa fa-chevron-down expand"></i>
+          </article>
+        </div>
+      </main>
+      <main>
+        <div class="row row-grey">
+          <content class="col-left"> <i class="fa fa-television fa-5x cred-icons"></i></content>
+          <article class="col-right">
+            <iframe id="video" width="480" height="270" src="//www.youtube.com/embed/Yipwf4Cp4vQ?rel=0" frameborder="0" allowfullscreen></iframe>
+          </article>
+        </div>
+      </main>
+      <main>
+        <div class="row row-white">
           <content class="col-left"> <i class="fa fa-share-alt fa-5x cred-icons"></i></content>
           <article class="col-right trans">
             <h1 class="headline">Share my site</h1>
