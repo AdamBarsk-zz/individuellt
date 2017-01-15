@@ -5,8 +5,7 @@
   <body>
     <?php
     include('nav.php');
-      if(isset($_GET['page']) && $_GET['page']!=""){
-        $page = "";
+      if(isset($_GET['page'])){
         switch ($_GET['page']) {
           case 'main.php':
             $page = "main.php";
@@ -24,7 +23,6 @@
             $page = "main.php";
             break;
         }
-
         include($page);
       } else {
         include('main.php');
