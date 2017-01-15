@@ -26,7 +26,20 @@
           <article class="col-right trans">
             <h1 class="headline">Message me</h1>
             <div class="hide">
+              <form action="message.php" method="post">
+                <div class="container-inputs">
+                  <label><b>Name</b></label>
+                  <input type="text" placeholder="Your name" name="sender" class="admin-inputs" required>
+                  <label><b>Message</b></label>
+                  <textarea type="text" placeholder="Your message" name="message" class="admin-inputs" required></textarea>
+                  <label><b>Phone</b></label>
+                  <input type="text" placeholder="Your phone" name="phone" class="admin-inputs" required>
+                  <label><b>Email</b></label>
+                  <input type="text" placeholder="Your email" name="email" class="admin-inputs" required>
 
+                  <button type="submit" class="login-button"><b>Send message</b></button>
+                </div>
+              </form>
             </div><i class="fa fa-chevron-down expand"></i>
           </article>
         </div>

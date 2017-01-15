@@ -9,3 +9,6 @@ Just done inserting all data into the database.
 
 2017-01-13 12:53:00
 Admin system works, login and logout done. Just need to make changes save into database.
+
+2017-01-15 22:28:57
+Admin totally done, message function done.
