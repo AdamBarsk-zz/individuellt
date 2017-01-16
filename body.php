@@ -7,16 +7,20 @@
     include('nav.php');
       if(isset($_GET['page'])){
         switch ($_GET['page']) {
-          case 'main.php':
+          case 'main':
             $page = "main.php";
             break;
 
-          case 'info.php':
+          case 'info':
             $page = "info.php";
             break;
 
-          case 'cv.php':
+          case 'cv':
             $page = "cv.php";
+            break;
+
+          case 'portfolio':
+            $page = "portfolio.php";
             break;
 
           default:

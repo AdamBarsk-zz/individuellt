@@ -122,14 +122,14 @@ main {
   text-align: center;
 }
 
-.nav a, .footer a {
+.nav a, .footer a, .prop-links {
   text-decoration: none;
   color: #262626;
   font-weight: bold;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
-.nav a:hover, .footer a:hover {
+.nav a:hover, .footer a:hover, .prop-links:hover {
   color: #ff5400;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
 }

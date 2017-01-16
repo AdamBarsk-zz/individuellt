@@ -28,19 +28,19 @@
      s = "0" + s;
    }
 
-   document.getElementById('days').innerText = d;
-   document.getElementById('hours').innerText = h;
-   document.getElementById('minutes').innerText = m;
-   document.getElementById('seconds').innerText = s;
+   $('#days').html(d);
+   $('#hours').html(h);
+   $('#minutes').html(m);
+   $('#seconds').html(s);
 
    var start = setTimeout(countdownOne, 1000);
 
    if (remaining <= 0) {
      clearTimeout(start);
-     document.getElementById('days').innerText = "D";
-     document.getElementById('hours').innerText = "O";
-     document.getElementById('minutes').innerText = "N";
-     document.getElementById('seconds').innerText = "E";
+     $('#days').html("D");
+     $('#hours').html("O");
+     $('#minutes').html("N");
+     $('#seconds').html("E");
    }
 
 
@@ -74,19 +74,19 @@
      s = "0" + s;
    }
 
-   document.getElementById('daysTwo').innerText = d;
-   document.getElementById('hoursTwo').innerText = h;
-   document.getElementById('minutesTwo').innerText = m;
-   document.getElementById('secondsTwo').innerText = s;
+   $('#daysTwo').html(d);
+   $('#hoursTwo').html(h);
+   $('#minutesTwo').html(m);
+   $('#secondsTwo').html(s);
 
    setTimeout(countdownTwo, 1000);
 
    if (remaining <= 0) {
      clearTimeout(start);
-     document.getElementById('daysTwo').innerText = "D";
-     document.getElementById('hoursTwo').innerText = "O";
-     document.getElementById('minutesTwo').innerText = "N";
-     document.getElementById('secondsTwo').innerText = "E";
+     $('#daysTwo').html("D");
+     $('#hoursTwo').html("O");
+     $('#minutesTwo').html("N");
+     $('#secondsTwo').html("E");
    }
 
  })();

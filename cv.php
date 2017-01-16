@@ -34,7 +34,7 @@ echo '        <main>
 
         <main>
             <div class="row row-white">
-                <content class="col-left"> <i class="fa fa-codepen fa-5x cred-icons"></i></content>
+                <content class="col-left"> <i class="fa fa-location-arrow fa-5x cred-icons"></i></content>
                 <article class="col-right trans">
                     <h1 class="headline admin" id="cv-h1-4">'.$cvH14.'</h1>
                     <p class="information admin" id="cv-show-p4">'.$cvShowP4.'</p>
