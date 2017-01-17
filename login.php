@@ -18,17 +18,23 @@ if (isset ($_POST['username'], $_POST['password'])){
 
   $username = mysqli_real_escape_string($db, $_POST['username']);
   $password = mysqli_real_escape_string($db, $_POST['password']);
+  $hash = password_hash($password, PASSWORD_DEFAULT, ['cost' => 12]);
   $query = "SELECT username, password FROM user WHERE username = '".$username."' AND password = '".$password."'";
 
   $result = mysqli_query($db, $query);
 
   if(mysqli_num_rows($result) > 0){
-    $_SESSION['admin'] = TRUE;
-    header('Location: http://adambarsk.se');
+    $row = mysqli_fetch_assoc($result);
+    if (password_verify($row['password'], $hash)) {
+      $_SESSION['admin'] = TRUE;
+      header('Location: http://adambarsk.se');
+      exit();
+    }
   } else {
     echo '
     <script type="text/javascript">admin();</script>
     ';
+    exit();
   }
 }
 ?>

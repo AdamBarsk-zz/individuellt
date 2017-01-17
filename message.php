@@ -1,10 +1,10 @@
 <?php
   session_start();
   include('config.php');
-  $sender = $_POST['sender'];
-  $message = $_POST['message'];
-  $phone = $_POST['phone'];
-  $email =$_POST['email'];
+  $sender = mysqli_real_escape_string($db, $_POST['sender']);
+  $message = mysqli_real_escape_string($db, $_POST['message']);
+  $phone = mysqli_real_escape_string($db, $_POST['phone']);
+  $email =mysqli_real_escape_string($db, $_POST['email']);
   $query = "
   	INSERT INTO messages (
   	date,
