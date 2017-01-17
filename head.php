@@ -11,5 +11,6 @@ echo '<head>
     <link rel="stylesheet" href="https://use.fontawesome.com/45faac0910.css"/>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="/scripts/admin.js" type="text/javascript"></script>
+    <script src="/scripts/hangman.js" type="text/javascript"></script>
   </head>'
  ?>
