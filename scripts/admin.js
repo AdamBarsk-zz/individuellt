@@ -43,7 +43,3 @@ function admin(){
       }
   }
 }
-
-function game(){
-  alert('hej hangman');
-}
