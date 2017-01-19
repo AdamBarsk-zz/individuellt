@@ -14,7 +14,7 @@ echo '<main>
     <article class="col-right trans">
       <h1 class="headline admin" id="port-headline2">'.$portHeadline2.'</h1>
       <p class="main-content admin" id="port-p2">'.$portP2.'</p>
-      <a href="http://www.dengladageten.se" class="prop-links admin" id="port-a">'.$portA.'</a>
+      <a href="http://www.dengladageten.se" target="_blank" class="prop-links admin" id="port-a">'.$portA.'</a>
     </article>
   </div>
 </main>

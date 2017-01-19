@@ -21,5 +21,5 @@
   	'$email'
   	)";
   mysqli_query($db, $query);
-  header('Location: http://adambarsk.se/?page=info.php')
+  header('Location: http://www.adambarsk.se/?page=info')
 ?>
