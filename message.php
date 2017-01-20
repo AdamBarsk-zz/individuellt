@@ -1,10 +1,13 @@
 <?php
   session_start();
+
   include('config.php');
-  $sender = mysqli_real_escape_string($db, $_POST['sender']);
+
+  $sender  = mysqli_real_escape_string($db, $_POST['sender']);
   $message = mysqli_real_escape_string($db, $_POST['message']);
-  $phone = mysqli_real_escape_string($db, $_POST['phone']);
-  $email =mysqli_real_escape_string($db, $_POST['email']);
+  $phone   = mysqli_real_escape_string($db, $_POST['phone']);
+  $email   = mysqli_real_escape_string($db, $_POST['email']);
+
   $query = "
   	INSERT INTO messages (
   	date,
@@ -20,6 +23,8 @@
   	'$phone',
   	'$email'
   	)";
+
   mysqli_query($db, $query);
+
   header('Location: http://www.adambarsk.se/?page=info')
 ?>

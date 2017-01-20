@@ -278,6 +278,12 @@ main {
     width: 30%;
 }
 
+.modal-hangman {
+  background-color: #CCCDD1;
+  margin: 5% auto 15% auto;
+  width: 65%;
+}
+
 .container-inputs {
   padding: 12px;
 }
