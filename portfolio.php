@@ -1,5 +1,6 @@
 <?php
-echo '<main>
+echo '
+<main>
   <div class="row row-grey">
     <content class="col-left"> <i class="fa fa-user fa-5x cred-icons"></i></content>
     <article class="col-right">

@@ -27,7 +27,7 @@ if (isset ($_POST['username'], $_POST['password'])){
     $row = mysqli_fetch_assoc($result);
     if (password_verify($row['password'], $hash)) {
       $_SESSION['admin'] = TRUE;
-      header('Location: http://www.adambarsk.se/?page=main');
+      header('Location: ?page=main');
       exit();
     }
   } else {

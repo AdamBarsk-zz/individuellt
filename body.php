@@ -32,6 +32,7 @@
         include('main.php');
       }
     include('login.php');
+    include('hangman.php');
     include('footer.php');
     ?>
   </body>
