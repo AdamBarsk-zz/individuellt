@@ -301,3 +301,16 @@ main {
 .login-button {
   background-color: #ff5400;
 }
+
+.play-again {
+  display: none;
+}
+
+.hangman-lives {
+  color: red;
+}
+
+.hangman-picture {
+  margin: 0 46%;
+  text-align: left;
+}
