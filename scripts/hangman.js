@@ -1,7 +1,7 @@
 var headline = "Hangman";
 var lives = 8;
 var wordList = ["TESTHANG", "TESTMAN", "HANGMAN", "SCHOOLISCOOL"];
-var word;
+var word = [];
 var clue = [];
 var guesses = [];
 
@@ -20,9 +20,9 @@ function interaction() {
       var key = String.fromCharCode(event.which);
       key.toUpperCase();
       guess(key);
+      $("#hangman-word").text(clue.join(""));
       if (!(word.includes(key))) {
         if (!(guesses.includes(" "+key))) {
-          console.log(guesses)
           guesses.push(" "+key);
           lives = lives - 1;
         }
@@ -35,12 +35,11 @@ function interaction() {
 
 function newGame() {
   word = wordList[Math.floor(Math.random() * wordList.length)];
+  word = Array.from(word)
   $("#hangman-word").text("");
   clue = [];
-  for (var i = 0; i < word.length; i++) {
-    clue += "_";
-  }
-  $("#hangman-word").text(clue);
+  clue = word.map(x => "_")
+  $("#hangman-word").text(clue.join(""));
   $('.hangman-lives').css('color', '#262626')
   lives = 8;
   guesses = [];
@@ -49,16 +48,17 @@ function newGame() {
 
 function print() {
   $("#hangman-status").text(headline);
-  $("#hangman-guess").text(guesses);
+  $("#hangman-guess").text(guesses.join(""));
   $("#hangman-lives").text('Lives left: ' + lives);
 }
 
 function guess(key) {
-  for (i = 0; i < word.length; i++) {
-    if (key == word.charAt(i)) {
-      clue = clue.substr(0, i) + key + clue.substr(i+1);
-      $("#hangman-word").text(clue);
-    }
+  if (word.includes(key)) {
+    clueRemake = word.map(function(x, i) {
+       if (x == key) {
+         return clue.splice(i, 1, key)
+       }
+    })
   }
 }
 
@@ -99,7 +99,7 @@ function status() {
     default:
       $('#hangman-picture').html(' ');
   }
-  if (clue == word) {
+  if (clue.toString() === word.toString()) {
     headline = "YOU WON!";
     gameOn = false;
     print();
