@@ -307,7 +307,7 @@ main {
 }
 
 .hangman-lives {
-  color: red;
+  color: #262626;
 }
 
 .hangman-picture {

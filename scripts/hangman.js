@@ -11,6 +11,7 @@ function game() {
   interaction();
   newGame();
   print();
+  status();
 }
 
 function interaction() {
@@ -40,6 +41,7 @@ function newGame() {
     clue += "_";
   }
   $("#hangman-word").text(clue);
+  $('.hangman-lives').css('color', '#262626')
   lives = 8;
   guesses = [];
   headline = "Hangman";
@@ -67,18 +69,21 @@ function status() {
       break;
     case 6:
       $('#hangman-picture').html(hangSix);
+      $('.hangman-lives').css('color', '#FFFF00')
       break;
     case 5:
       $('#hangman-picture').html(hangFive);
       break;
     case 4:
       $('#hangman-picture').html(hangFour);
+      $('.hangman-lives').css('color', '#FF8000')
       break;
     case 3:
       $('#hangman-picture').html(hangThree);
       break;
     case 2:
       $('#hangman-picture').html(hangTwo);
+      $('.hangman-lives').css('color', '#FF0000')
       break;
     case 1:
       $('#hangman-picture').html(hangOne);
@@ -94,13 +99,6 @@ function status() {
     default:
       $('#hangman-picture').html(' ');
   }
-  // else if (lives <= 0) {
-  //   headline = "GAME OVER!";
-  //   gameOn = false;
-  //   print();
-  //   $('.play-again').css('display', 'block');
-  //   playAgain();
-  // }
   if (clue == word) {
     headline = "YOU WON!";
     gameOn = false;
@@ -125,8 +123,9 @@ _______</br>
 |\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0O</br>
 |\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0/|\\</br>
 |\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0/ \\</br>
-|\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0DOED</br>
+|\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0DED!</br>
 |\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0`
+
 var hangOne = `
 _______</br>
 |\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0|</br>
@@ -135,6 +134,7 @@ _______</br>
 |\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0/</br>
 |\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0</br>
 |\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0`
+
 var hangTwo = `
 _______</br>
 |\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0|</br>
@@ -143,6 +143,7 @@ _______</br>
 |\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0</br>
 |\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0</br>
 |\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0`
+
 var hangThree = `
 _______</br>
 |\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0|</br>
@@ -151,6 +152,7 @@ _______</br>
 |\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0</br>
 |\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0</br>
 |\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0`
+
 var hangFour = `
 _______</br>
 |\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0|</br>
@@ -159,6 +161,7 @@ _______</br>
 |\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0 </br>
 |\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0 </br>
 |\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0`
+
 var hangFive = `
 _______</br>
 |\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0|</br>
@@ -167,6 +170,7 @@ _______</br>
 |\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0</br>
 |\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0</br>
 |\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0`
+
 var hangSix = `
 _______</br>
 |\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0</br>
@@ -175,6 +179,7 @@ _______</br>
 |\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0</br>
 |\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0</br>
 |\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0`
+
 var hangSeven = `
 \xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0</br>
 |\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0</br>
