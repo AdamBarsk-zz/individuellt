@@ -3,7 +3,6 @@ var keywordHangman = "HANGMAN";
 var input = "";
 var position = 0;
 var gameOn = false;
-console.log(gameOn);
 
 $(document).ready(function() {
   $(window).keyup(function(e) {

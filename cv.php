@@ -6,7 +6,7 @@ echo '
         <article class="col-right trans">
             <h1 class="headline admin" id="cv-h1-1">'.$cvH11.'</h1>
             <p class="information admin" id="cv-show-p1">'.$cvShowP1.'</p>
-            <p class="hide subline admin" id="cv-hide-p1">'.$cvHideP1.'</p><i class="fa fa-chevron-down expand"> </i>
+            <p class="hide subline admin showText" id="cv-hide-p1">'.$cvHideP1.'</p><i class="fa fa-chevron-down expand"> </i>
         </article>
     </div>
 </main>
@@ -17,7 +17,7 @@ echo '
         <article class="col-right trans">
             <h1 class="headline admin" id="cv-h1-2">'.$cvH12.'</h1>
             <p class="information admin" id="cv-show-p2">'.$cvShowP2.'</p>
-            <p class="hide subline admin" id="cv-hide-p2">'.$cvHideP2.'</p><i class="fa fa-chevron-down expand"></i>
+            <p class="hide subline admin showText" id="cv-hide-p2">'.$cvHideP2.'</p><i class="fa fa-chevron-down expand"></i>
         </article>
     </div>
 </main>
@@ -28,7 +28,7 @@ echo '
         <article class="col-right trans">
             <h1 class="headline admin" id="cv-h1-3">'.$cvH13.'</h1>
             <p class="information admin" id="cv-show-p3">'.$cvShowP3.'</p>
-            <p class="hide subline admin" id="cv-hide-p3">'.$cvHideP3.'</p><i class="fa fa-chevron-down expand"> </i>
+            <p class="hide subline admin showText" id="cv-hide-p3">'.$cvHideP3.'</p><i class="fa fa-chevron-down expand"> </i>
         </article>
     </div>
 </main>
@@ -39,7 +39,7 @@ echo '
         <article class="col-right trans">
             <h1 class="headline admin" id="cv-h1-4">'.$cvH14.'</h1>
             <p class="information admin" id="cv-show-p4">'.$cvShowP4.'</p>
-            <div class="hide subline admin" id="cv-hide-p4">'.$cvHideP4.'</div><i class="fa fa-chevron-down expand"></i>
+            <div class="hide subline admin showText" id="cv-hide-p4">'.$cvHideP4.'</div><i class="fa fa-chevron-down expand"></i>
         </article>
     </div>
 </main>

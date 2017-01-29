@@ -1,6 +1,27 @@
 <?php
-echo '
-<div id="modal" class="modal">
+if (isset ($_POST['username'], $_POST['password'])){
+
+  $username = mysqli_real_escape_string($db, $_POST['username']);
+  $password = mysqli_real_escape_string($db, $_POST['password']);
+  $hash = password_hash($password, PASSWORD_DEFAULT, ['cost' => 11]);
+  $query = "SELECT username, password FROM user WHERE username = '".$username."' AND password = '".$password."'";
+  $result = mysqli_query($db, $query);
+
+  if(mysqli_num_rows($result) > 0){
+    $row = mysqli_fetch_assoc($result);
+    if (password_verify($row['password'], $hash)) {
+      $_SESSION['admin'] = TRUE;
+      echo 'yesy';
+      header('Location: http://adambarsk.se/?page=main');
+      exit();
+    }
+  } else {
+    header('Location: http://adambarsk.se/?page=main');
+    exit();
+  }
+}
+
+echo '<div id="modal" class="modal">
   <form class="modal-content" action="" method="post">
     <div class="container-inputs">
       <label><b>Username</b></label>
@@ -13,28 +34,4 @@ echo '
     </div>
   </form>
 </div>';
-
-if (isset ($_POST['username'], $_POST['password'])){
-
-  $username = mysqli_real_escape_string($db, $_POST['username']);
-  $password = mysqli_real_escape_string($db, $_POST['password']);
-  $hash = password_hash($password, PASSWORD_DEFAULT, ['cost' => 12]);
-  $query = "SELECT username, password FROM user WHERE username = '".$username."' AND password = '".$password."'";
-
-  $result = mysqli_query($db, $query);
-
-  if(mysqli_num_rows($result) > 0){
-    $row = mysqli_fetch_assoc($result);
-    if (password_verify($row['password'], $hash)) {
-      $_SESSION['admin'] = TRUE;
-      header('Location: ?page=main');
-      exit();
-    }
-  } else {
-    echo '
-    <script type="text/javascript">admin();</script>
-    ';
-    exit();
-  }
-}
 ?>

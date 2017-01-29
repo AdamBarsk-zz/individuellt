@@ -20,7 +20,7 @@ function interaction() {
       var key = String.fromCharCode(event.which);
       key.toUpperCase();
       guess(key);
-      $("#hangman-word").text(clue.join(""));
+      $("#hangman-word").html(clue.join(""));
       if (!(word.includes(key))) {
         if (!(guesses.includes(" "+key))) {
           guesses.push(" "+key);
@@ -36,10 +36,10 @@ function interaction() {
 function newGame() {
   word = wordList[Math.floor(Math.random() * wordList.length)];
   word = Array.from(word)
-  $("#hangman-word").text("");
+  $("#hangman-word").html("");
   clue = [];
   clue = word.map(x => "_")
-  $("#hangman-word").text(clue.join(""));
+  $("#hangman-word").html(clue.join(""));
   $('.hangman-lives').css('color', '#262626')
   lives = 8;
   guesses = [];
@@ -47,9 +47,9 @@ function newGame() {
 }
 
 function print() {
-  $("#hangman-status").text(headline);
-  $("#hangman-guess").text(guesses.join(""));
-  $("#hangman-lives").text('Lives left: ' + lives);
+  $("#hangman-status").html(headline);
+  $("#hangman-guess").html(guesses.join(""));
+  $("#hangman-lives").html('Lives left: ' + lives);
 }
 
 function guess(key) {

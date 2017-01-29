@@ -1,10 +1,11 @@
 <?php session_start(); ?>
 <!DOCTYPE html>
-<?php include('head.php'); ?>
+<?php include_once('head.php'); ?>
 <html>
   <body>
     <?php
-    include('nav.php');
+    include_once('login.php');
+    include_once('nav.php');
       if(isset($_GET['page'])){
         switch ($_GET['page']) {
           case 'main':
@@ -27,13 +28,13 @@
             $page = "main.php";
             break;
         }
-        include($page);
+        include_once($page);
       } else {
-        include('main.php');
+        include_once('main.php');
       }
-    include('login.php');
-    include('hangman.php');
-    include('footer.php');
+
+    include_once('footer.php');
+    include_once('hangman.php');
     ?>
   </body>
 </html>
