@@ -4,6 +4,7 @@ if (isset ($_POST['username'], $_POST['password'])){
   $username = mysqli_real_escape_string($db, $_POST['username']);
   $password = mysqli_real_escape_string($db, $_POST['password']);
   $hash = password_hash($password, PASSWORD_DEFAULT, ['cost' => 11]);
+
   $query = "SELECT username, password FROM user WHERE username = '".$username."' AND password = '".$password."'";
   $result = mysqli_query($db, $query);
 
@@ -11,7 +12,6 @@ if (isset ($_POST['username'], $_POST['password'])){
     $row = mysqli_fetch_assoc($result);
     if (password_verify($row['password'], $hash)) {
       $_SESSION['admin'] = TRUE;
-      echo 'yesy';
       header('Location: http://adambarsk.se/?page=main');
       exit();
     }

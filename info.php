@@ -80,5 +80,8 @@ echo '
   <script src="scripts/expand.js"></script>
   <script src="https://apis.google.com/js/platform.js" async="" defer=""></script>';
 
-  session_destroy();
+  if ($_SESSION['confirmation'] || $_SESSION['senderError'] || $_SESSION['emailError'] || $_SESSION['phoneError']) {
+    session_destroy();
+  }
+
 ?>

@@ -17,7 +17,7 @@ echo '
         <tr>
           <td colspan="4" class="countText">Practice</td>
         </tr>
-        <tr>
+        <tr id="practice">
           <td id="days" class="countText"> </td>
           <td id="hours" class="countText"> </td>
           <td id="minutes" class="countText"> </td>
@@ -36,11 +36,11 @@ echo '
         <tr>
           <td colspan="4" class="countText">Graduation</td>
         </tr>
-        <tr>
-          <td id="daysTwo" class="countText"></td>
-          <td id="hoursTwo" class="countText"></td>
-          <td id="minutesTwo" class="countText"></td>
-          <td id="secondsTwo" class="countText"></td>
+        <tr id="graduation">
+          <td id="days" class="countText"></td>
+          <td id="hours" class="countText"></td>
+          <td id="minutes" class="countText"></td>
+          <td id="seconds" class="countText"></td>
         </tr>
         <tr>
           <td>Days</td>
